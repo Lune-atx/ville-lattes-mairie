@@ -1,0 +1,38 @@
+.lattesHeader{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    position: sticky;
+    top: 0; left: 0;
+    z-index: 100;
+    background-color: $w;
+    &_burger{
+        color: $main;
+        font-size: 2rem;
+        margin: 0.5rem 1rem;
+        z-index: 100;
+    }
+}
+.custom-logo{
+    height: 2rem;
+    margin: 0.5rem;
+}
+@media screen and (min-width: $desktopSize){
+    .lattesHeader{
+        max-width: $mainWrapperSize;
+        width: 100%;
+        left: initial;
+        right: initial;
+        border-bottom: 0.2rem solid $main;
+        &_logo{
+            height: 2rem;
+            margin: 0.5rem;
+        }    
+        &_burger{
+            display: none;
+        }    
+    }
+}

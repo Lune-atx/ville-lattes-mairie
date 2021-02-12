@@ -1,0 +1,141 @@
+.lattes{
+    // SECTION
+    &_social{
+        padding: 3rem 0;
+        &_title{
+            color: $main;
+            font-size: 2.5rem;
+            font-weight: 600;
+            margin-bottom: 3rem;
+            text-align: center;
+        }
+    }
+    // NETWORKAREA
+    &_networkArea{
+        display: grid;
+        grid-gap: 2rem 0;
+        grid-template-columns: 1fr;
+        justify-items: center;
+        padding: 1rem;
+    }
+    // NETWORKS
+    &_network{
+        background-size: cover;
+        box-shadow: 0.5rem 0.5rem 2rem lighten($b, 70);
+        color: $w;
+        display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: center;
+        font-size: 1.2rem;
+        font-weight: 600;
+        max-width: 22rem;
+        padding: 1rem;
+        width: 90%;  
+        &_icone{
+            font-size: 2rem;
+            margin-right: 1rem;
+        }
+        border-radius: 0.2rem;
+        -webkit-border-radius: 0.2rem;
+        -moz-border-radius: 0.2rem;
+        -ms-border-radius: 0.2rem;
+        -o-border-radius: 0.2rem;
+    }
+    &_facebookArea{
+        display: none;
+    }
+}
+@media screen and (min-width: $desktopSize){
+    .lattes{
+        &_social{
+            display: grid;
+            grid-gap: 2rem 4rem;
+            justify-content: center;
+            grid-template-areas:
+            "title title"
+            "facebook networks";
+            margin: auto;
+            width: 50rem;
+            &_title{
+                grid-area: title;
+                margin: initial;
+            }      
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
+        &_networkArea{
+            grid-area: networks;
+            display: grid;         
+            max-width: 23rem;
+            padding: initial;
+        }
+        &_network{
+            display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+            font-size: 1rem;
+            height: 8rem;
+            margin: 0;
+            text-align: center;
+            width: 8rem; 
+            &:hover{
+                transform: scale(0.98);
+                -webkit-transform: scale(0.98);
+                -moz-transform: scale(0.98);
+                -ms-transform: scale(0.98);
+                -o-transform: scale(0.98);
+            } 
+            &_icone{
+                font-size: 3rem;
+                margin-bottom: 0.5rem;
+                margin-right: initial;
+            }
+            transition: transform 0.3s;
+            -webkit-transition: transform 0.3s;
+            -moz-transition: transform 0.3s;
+            -ms-transition: transform 0.3s;
+            -o-transition: transform 0.3s;
+        }  
+        &_facebookArea{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-area: facebook;
+            background-color: $facebook;
+            box-shadow: 0.5rem 0.5rem 2rem lighten($b, 70);
+            border-radius: 0.2rem;
+        }
+    }
+}
+@media screen and (min-width: $desktopSizeL){
+    .lattes{
+        &_social{         
+            width: initial;
+        }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          
+        &_networkArea{
+            display: flex;
+                align-content: center;  
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+            max-width: 35rem;
+            padding: initial;
+        }
+        &_network{
+            font-size: 1.2rem;
+            height: 12rem;
+            margin: 2rem;              
+            width: 12rem;  
+            &_icone{
+                font-size: 6rem;
+                margin-bottom: 1rem;
+                margin-right: initial;
+            }
+        }
+        &_facebookArea{
+            background-color: $facebook;
+            display: initial;
+            padding: 0.5rem 2rem;           
+        }
+    }
+}

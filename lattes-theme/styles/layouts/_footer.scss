@@ -1,0 +1,226 @@
+.lattes_footer{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: auto;
+    max-width: 90rem;    
+    padding-top: 3rem;
+    position: relative;
+    z-index: 1;
+    &::after{
+        background-color: $b;
+        content:'';
+        opacity: 0.7;
+        position: absolute;
+        top: 0; right: 0; bottom:0; left:0;
+        z-index: -1;
+    }
+    &_infos{  
+        display: grid;
+        justify-content: center;
+        grid-gap: 2rem 0;
+        padding: 1rem;
+        text-align: center;
+        line-height: 1.5rem;       
+    }     
+    &_townHall{
+        text-align: center;
+        color: $w;       
+        &_title{
+            font-size: 2.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        &_address{
+            font-size: 1.2rem;  
+            margin: 1rem 0;
+        }
+        &_contact{
+            font-size: 1.2rem;  
+        }
+    }
+    &_timetable{
+        color: $w;
+        &_title{
+            font-size: 2.1rem;
+            font-weight: 600;
+            margin-bottom: 1rem;
+        }
+        &_content{
+            font-size: 1.2rem;
+        }
+    }
+    &_logoArea{   
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        max-width: 25rem;
+        width: 100%;
+        &_link{
+            display: flex;
+                align-items: center;
+                justify-content: center;
+            height: 5rem;
+            margin: 1rem;
+            padding: 0.5rem;
+            position: relative;         
+            z-index: 1;
+            &::after{
+                background-color: $w;
+                content:'';
+                opacity: 0.5;
+                position: absolute;
+                top: 0; right: 0; bottom: 0; left: 0;
+                z-index: -1;
+                border-radius: 0.2rem;
+                -webkit-border-radius: 0.2rem;
+                -moz-border-radius: 0.2rem;
+                -ms-border-radius: 0.2rem;
+                -o-border-radius: 0.2rem;
+            }
+            &_logo{
+                max-height: 90%;
+                max-width:90%;
+            }
+        }            
+    }
+    &_legal{
+        background-color: $w;
+        color: $main;
+        padding: 2rem;
+        text-align: center;
+        &_content{
+            font-weight: 600;
+            &_link{
+                font-weight: inherit;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+@media screen and (min-width: $tabSize){
+    .lattes_footer{
+     
+        &_infos{
+            grid-gap: 2rem;
+            grid-template-areas:
+            "townhall timetable"
+            "logo logo"
+            ;     
+        } 
+        &_townhall{
+            grid-area: townhall;
+        }
+        &_timetable{
+            grid-area: timetable;
+        }
+        &_logoArea{
+            grid-area: logo;
+        }
+
+
+    }
+}
+@media screen and (min-width: $desktopSize){
+    .lattes_footer{       
+        padding-top: initial;
+        overflow: hidden;
+        &_infos{  
+            grid-template-areas: 
+            "townhall timetable logo"
+            ;
+            grid-template-columns: repeat(3, 1fr);
+            min-width: 60rem;
+            padding: 2rem 4rem;
+        }
+        &_townHall{
+            color: $w;
+            padding: initial;
+        }
+        &_timetable{
+            margin-top: initial;
+            padding: initial;
+        }
+        &_logoArea{           
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 25rem;
+            width: 100%;
+            &_link{
+                height: 4rem;
+                margin: 0.5rem;
+                padding: 0.5rem;
+                position: relative;
+                z-index: 1;
+                &::after{
+                    background-color: $w;
+                    content:'';
+                    opacity: 0.5;
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    z-index: -1;
+                    border-radius: 0.2rem;
+                    -webkit-border-radius: 0.2rem;
+                    -moz-border-radius: 0.2rem;
+                    -ms-border-radius: 0.2rem;
+                    -o-border-radius: 0.2rem;
+                    transition: background-color 0.4s, opacity 0.4s;
+                    -webkit-transition: background-color 0.4s, opacity 0.4s;
+                    -moz-transition: background-color 0.4s, opacity 0.4s;
+                    -ms-transition: background-color 0.4s, opacity 0.4s;
+                    -o-transition: background-color 0.4s, opacity 0.4s;
+}
+                &:hover{
+                    
+                    &::after{
+                        background-color: $b;
+                        opacity: 1;
+                    }
+                    transform: scale(1.5);
+                    -webkit-transform: scale(1.5);
+                    -moz-transform: scale(1.5);
+                    -ms-transform: scale(1.5);
+                    -o-transform: scale(1.5);
+                    z-index: 2;
+}
+                &_logo{
+                    max-height: 90%;
+                    max-width:90%;
+                }
+                transition: transform 0.4s;
+                -webkit-transition: transform 0.4s;
+                -moz-transition: transform 0.4s;
+                -ms-transition: transform 0.4s;
+                -o-transition: transform 0.4s;
+}            
+        }
+        &_legal{
+            background-color: $w;
+            color: $main;
+            padding: 1rem 2rem;
+            text-align: center;
+            &_content{
+                font-weight: 600;
+                &_link{
+                    background-color: $w;
+                    display: inline-block;
+                    font-weight: inherit;
+                    text-decoration: underline;                    
+                    &:hover{
+                        transform: scale(1.2);
+                        -webkit-transform: scale(1.2);
+                        -moz-transform: scale(1.2);
+                        -ms-transform: scale(1.2);
+                        -o-transform: scale(1.2);
+}
+                    transition: transform 0.3s;
+                    -webkit-transition: transform 0.3s;
+                    -moz-transition: transform 0.3s;
+                    -ms-transition: transform 0.3s;
+                    -o-transition: transform 0.3s;
+}
+            }
+        }
+    }
+}

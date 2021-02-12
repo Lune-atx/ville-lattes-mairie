@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="scripts/lattesMenu.js" defer></script>
+    <script src="scripts/lattesSlider.js" defer></script>
+    <link rel="stylesheet" href="node_modules/@fortawesome/fontawesome-free/css/all.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <title>Lattes - Accueil</title>
+</head>
+<body>
+    <div class="mainWrapper">
+        <!-- NAVIGATION -->
+        <header class="lattesHeader" id="lattesHeader">
+            <a href="#"><img class="lattesHeader_logo" src="medias/logos/logo.png" alt="Logotype"></a>
+            <nav class="lattesNavArea" id="lattesNav">
+                <ul class="lattesNavArea_nav">
+                    <li class="lattesNavArea_menu"><a href="#" class="lattesNavArea_menu_link"><i class="fas fa-home lattesNavArea_menu_icone"></i> Accueil</a></li>
+                    <li class="lattesNavArea_menu"><a href="#" class="lattesNavArea_menu_link"><i class="fas fa-sticky-note lattesNavArea_menu_icone"></i> Découvrir Lattes</a>
+                        <ul class="lattesSubNav">
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Plan de Lattes</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Journal Communal</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Découvrir Lattes</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Contact</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Risques Majeurs</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Marché public</a></li>
+                        </ul>
+                    </li>
+                    <li class="lattesNavArea_menu"><a href="#" class="lattesNavArea_menu_link"><i class="far fa-sticky-note lattesNavArea_menu_icone"></i> Services Mairie</a>
+                        <ul class="lattesSubNav">
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Associations</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Capitainerie</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Covid</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Ecoles</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Etape</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Festivités</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Jeunesse</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Médiathèque</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Musée</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Nature</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Petite enfance</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Sécurité</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Solidarité</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Sports</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Théâtre</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Tourisme</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link">Urbanisme</a></li>
+                        </ul>
+                    </li>
+                    <li class="lattesNavArea_menu"><a href="#" class="lattesNavArea_menu_link"><i class="far fa-sticky-note lattesNavArea_menu_icone"></i> Conseil municipal</a>
+                        <ul class="lattesSubNav">
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link" >Conseil Municipal</a></li>
+                            <li class="lattesSubNav_menu"><a href="#" class="lattesSubNav_menu_link" >Documents Budgétaires</a></li>
+                        </ul>
+                    </li>
+                    <li class="lattesNavArea_menu"><a href="#" class="lattesNavArea_menu_link"><i class="far fa-sticky-note lattesNavArea_menu_icone"></i> Espace citoyen</a></li>
+                </ul>
+            </nav>            
+            <i class="fas fa-bars lattesHeader_burger" id="lattesBurger"></i>
+        </header>
+        <main class="lattesHome">
+            <!-- SLIDER -->
+            <section class="lattesSlider">  
+                <ul class="lattesSlideArea lattesSlideArea--home" id="lattesSlideArea" data-lattesslideduration = "10" style="background-image: url('medias/backgrounds/main.jpg');">
+                    <li class="lattesSlideArea_slide">medias/slider/slide1.jpg</li>
+                    <li class="lattesSlideArea_slide">medias/slider/slide2.jpg</li>
+                </ul>
+                <h1 class="lattesSlider_title">Lattes, la vie naturellement</h1>        
+            </section>
+            <!-- NEWS -->
+             <section class="lattesNewsSection">
+                <h2 class="lattesNewsSection_title">Les news <i class="fas fa-info-circle lattesNewsSection_icone"></i></h2>
+                <div class="lattesNewsSection_newsArea" style="background-image: url('./medias/backgrounds/news.jpg')">
+                    <a href="#" class="lattesNews" style="background-image: url('medias/logos/logo.png')">
+                        <article>
+                            <h4 class="lattesNews_title">Nouvelle communication du maire : la police</h2>
+                        </article>
+                    </a>
+                    <a href="#" class="lattesNews" style="background-image: url('medias/logos/logo.png')">
+                        <article>
+                            <h4 class="lattesNews_title">Nouvelle communication du maire : la police</h2>
+                        </article>
+                    </a>
+                    <a href="#" class="lattesNews lattesNews--mediumScreen" style="background-image: url('medias/logos/logo.png')">
+                        <article>
+                            <h4 class="lattesNews_title">Nouvelle communication du maire : la police</h2>
+                        </article>
+                    </a>
+                    <a href="#" class="lattesNews lattesNews--largeScreen" style="background-image: url('medias/logos/logo.png')">
+                        <article>
+                            <h4 class="lattesNews_title">Nouvelle communication du maire : la police</h2>
+                        </article>
+                    </a>
+                </div>
+                <a href="#" class="lattesNewsSection_more"><i class="fas fa-plus"></i> Voir les autres news</a>
+            </section>   
+            <section class="lattes_agendaSection">
+                <h2 class="lattes_agendaSection_title">Agenda</h2>  
+                <div  class="lattes_agendaSection_eventArea">
+                    <!-- loop agenda -->
+                    <a href="#"  class="lattes_event" style="background-image: url('./medias/backgrounds/main.jpg')">
+                        <article class="lattes_event_content">
+                            <h4 class="lattes_event_content_title">Un super event de la mort qui tue trop long</h4>
+                            <p class="lattes_event_content_date">Du 28 au 30 semptembre</p>   
+                        </article>
+                    </a>  
+                    <a href="#"  class="lattes_event" style="background-image: url('./medias/backgrounds/main.jpg')">
+                        <article class="lattes_event_content">
+                            <h4 class="lattes_event_content_title">Un super event de la mort qui tue trop long</h4>
+                            <p class="lattes_event_content_date">Du 28 au 30 semptembre</p>   
+                        </article>
+                    </a>
+                    <a href="#"  class="lattes_event" style="background-image: url('./medias/backgrounds/main.jpg')">
+                        <article class="lattes_event_content">
+                            <h4 class="lattes_event_content_title">Un super event de la mort qui tue trop long</h4>
+                            <p class="lattes_event_content_date">Du 28 au 30 semptembre</p>   
+                        </article>
+                    </a>
+                    <a href="#"  class="lattes_event" style="background-image: url('./medias/backgrounds/main.jpg')">
+                        <article class="lattes_event_content">
+                            <h4 class="lattes_event_content_title">Un super event de la mort qui tue trop long</h4>
+                            <p class="lattes_event_content_date">Du 28 au 30 semptembre</p>   
+                        </article>
+                    </a>
+                    <a href="#"  class="lattes_event" style="background-image: url('./medias/backgrounds/main.jpg')">
+                        <article class="lattes_event_content">
+                            <h4 class="lattes_event_content_title">Un super event de la mort qui tue trop long</h4>
+                            <p class="lattes_event_content_date">Du 28 au 30 semptembre</p>   
+                        </article>
+                    </a>
+                    <a href="#"  class="lattes_event" style="background-image: url('./medias/backgrounds/main.jpg')">
+                        <article class="lattes_event_content">
+                            <h4 class="lattes_event_content_title">Un super event de la mort qui tue trop long</h4>
+                            <p class="lattes_event_content_date">Du 28 au 30 semptembre</p>   
+                        </article>
+                    </a>
+                    <a href="#"  class="lattes_event" style="background-image: url('./medias/backgrounds/main.jpg')">
+                        <article class="lattes_event_content">
+                            <h4 class="lattes_event_content_title">Un super event de la mort qui tue trop long</h4>
+                            <p class="lattes_event_content_date">Du 28 au 30 semptembre</p>   
+                        </article>
+                    </a>
+                </div>
+                <a href="#" class="lattes_agendaSection_more"><i class="fas fa-plus"></i> Voir les autres évènements</a>               
+            </section>
+            <!-- RESEAU SOCIAUX -->
+            <section class="lattes_social">
+                <h2 class="lattes_social_title">Suivez l'actualité de Lattes</h2>
+                <article class="lattes_networkArea">
+                    <a href="#" target="_blank"  class="lattes_network" style="background:rgb(255,150,0);"><i class="fas fa-envelope-open-text lattes_network_icone"></i>S'inscrire à la newsletter</a>
+                    <a href="#" target="_blank"  class="lattes_network" style="background:rgb(24,118,242);"><i class="fab fa-facebook-square lattes_network_icone"></i>Facebook</a>
+                    <a href="#" target="_blank"  class="lattes_network" style="background:rgb(255,0,0);"><i class="fab fa-youtube lattes_network_icone"></i>Youtube</a>
+                    <a href="#" target="_blank"  class="lattes_network" style="background: linear-gradient(45deg,rgb(255,220,128),rgb(252,175,69),rgb(247,119,55),rgb(245,96,64),rgb(253,29,29),rgb(225,48,108),rgb(193,53,132),rgb(131,58,180),rgb(88,81,219),rgb(64,93,230))"><i class="fab fa-instagram lattes_network_icone"></i>Instagram</a>
+                </article>
+                <aside class="lattes_facebookArea">
+                    <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FLattesTV%2F&tabs=timeline&width=500&height=500&small_header=true&adapt_container_width=true&hide_cover=false&show_facepile=false&appId" width="500" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowfullscreen="true" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" class="lattes_facebookArea_facebook"></iframe>
+                </aside>
+            </section>
+        </main>
+        <!-- FOOTER -->
+        <footer class="lattes_footer" style="background-image: url('../medias/backgrounds/main.jpg');">
+            <div class="lattes_footer_infos">
+                <div class="lattes_footer_townHall">
+                    <h4 class="lattes_footer_townHall_title">Contact</h4>
+                    <p class="lattes_footer_townHall_address">Mairie de Lattes<br>Av. de Montpellier<br>34940 Lattes</p>
+                    <p class="lattes_footer_townHall_contact">Tel : 04.67.99.77.77<br>Fax : 04.67.99.77.78<br>Mail : mairie@ville-lattes.fr</p>
+                </div>
+                <div class="lattes_footer_timetable">
+                    <h4 class="lattes_footer_timetable_title">Horaires</h4>
+                    <p class="lattes_footer_timetable_content">Lundi : 8h-17h<br>Mardi : 8h-17h<br>Mercredi : 8h-17h<br>Jeudi : 8h-17h<br>Vendredi : 8h-17h<br>Samedi : FERME<br>Dimanche : FERME<br></p>
+                </div>
+                <div class="lattes_footer_logoArea">
+                    <a href="#" class="lattes_footer_logoArea_link"><img src="medias/logos/rep.jpg" alt="Logo" class="lattes_footer_logoArea_link_logo"></a>
+                    <a href="#" class="lattes_footer_logoArea_link"><img src="medias/logos/occ.png" alt="Logo" class="lattes_footer_logoArea_link_logo"></a>
+                    <a href="#" class="lattes_footer_logoArea_link"><img src="medias/logos/dep.jpg" alt="Logo" class="lattes_footer_logoArea_link_logo"></a>
+                    <a href="#" class="lattes_footer_logoArea_link"><img src="medias/logos/metro.png" alt="Logo" class="lattes_footer_logoArea_link_logo"></a>
+                    <a href="#" class="lattes_footer_logoArea_link"><img src="medias/logos/tourismDep.png" alt="Logo" class="lattes_footer_logoArea_link_logo"></a>
+                    <a href="#" class="lattes_footer_logoArea_link"><img src="medias/logos/tourismMetro.png" alt="Logo" class="lattes_footer_logoArea_link_logo"></a>
+                    <a href="#" class="lattes_footer_logoArea_link"><img src="medias/logos/servicePublique.png" alt="Logo" class="lattes_footer_logoArea_link_logo"></a>
+                    <a href="#" class="lattes_footer_logoArea_link"><img src="medias/logos/pref.png" alt="Logo" class="lattes_footer_logoArea_link_logo"></a>
+                </div>
+            </div>
+            <div class="lattes_footer_legal">
+                <p class="lattes_footer_legal_content">© Mairie de Lattes - <a href="https://www.ville-lattes.fr/mentions-legales/" class="lattes_footer_legal_content_link">Mentions légales</a></p>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
