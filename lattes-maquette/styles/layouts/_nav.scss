@@ -1,0 +1,203 @@
+.lattesNavArea{
+    overflow-y: scroll;
+    overflow-x: hidden; 
+    width: 0;
+    position: fixed;    
+    top: 0; 
+    right: 0; 
+    bottom: 0; 
+    background-color: darken($w, 5);
+    // transitions à la fin
+    & *{
+        user-select: none;
+    }
+    &_nav{
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-top: 2rem;
+    }
+    &_menu{
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        justify-content: stretch;
+        padding: 1.5rem 2rem;
+        width: 100%;
+        // transitions à la fin
+        & a{
+            font-size: 1.2rem;
+            font-weight: 600;
+        }
+        &_icone{
+            color: $main;
+            font-size: 1.5rem;
+        }
+        &--selected{
+            color: $main;
+        }
+        transition: width 0.3s;
+        -webkit-transition: width 0.3s;
+        -moz-transition: width 0.3s;
+        -ms-transition: width 0.3s;
+        -o-transition: width 0.3s;
+    }
+    &--display{
+        border-left: 0.2rem solid darken($w, 10);
+        padding: 1rem;  
+        width: 20rem;
+    }
+    transition: width 0.3s;
+    -webkit-transition: width 0.3s;
+    -moz-transition: width 0.3s;
+    -ms-transition: width 0.3s;
+    -o-transition: width 0.3s;
+}
+.lattesSubNav{
+    display: grid;
+    grid-gap: 1.2rem 1rem;
+    max-height: 0;                
+    overflow-x: hidden;
+    overflow-y: scroll;  
+    width: 34rem;
+    position: relative; 
+    // transitions à la fin
+    &_menu{        
+        & a{
+            width: 100%;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: $main;
+        }
+    }
+    &--display{
+        margin-top: 1rem;
+        max-height: 15rem;
+        padding: 0.5rem; 
+    }
+    transition: max-height 0.3s, margin-top 0.3s, padding 0.3s;
+    -webkit-transition: max-height 0.3s, margin-top 0.3s, padding 0.3s;
+    -moz-transition: max-height 0.3s, margin-top 0.3s, padding 0.3s;
+    -ms-transition: max-height 0.3s, margin-top 0.3s, padding 0.3s;
+    -o-transition: max-height 0.3s, margin-top 0.3s, padding 0.3s;
+}
+@media screen and (min-width: $desktopSize){
+    .lattesNavArea{
+        display: initial;
+        flex: 1;
+        max-width: 60rem;
+        width: initial;    
+        overflow-y: initial;
+        padding-top: 0;
+        position: initial;
+        top:0; right:0;bottom: 0;
+        background-color: $w;
+        &_nav{
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            justify-content: space-around;
+            margin-top: initial;
+            width: 100%;
+        }
+        &_menu{ 
+            padding: 1rem 0.8rem;
+            width: initial; 
+            & a{
+                font-size: 1rem;     
+                // transition à la fin 
+                &:hover{
+                    transform: scale(0.97);
+                    -webkit-transform: scale(0.97);
+                    -moz-transform: scale(0.97);
+                    -ms-transform: scale(0.97);
+                    -o-transform: scale(0.97);
+                }
+                transition: transform 0.3s;
+                -webkit-transition: transform 0.3s;
+                -moz-transition: transform 0.3s;
+                -ms-transition: transform 0.3s;
+                -o-transition: transform 0.3s;
+            } 
+            &--selected{
+                background-color: $main;
+                color: $w;
+                & i{
+                    color: $w;
+                }
+            } 
+            &_icone{
+                display: none;                    
+            }
+            transition: background-color 0.5s;
+            -webkit-transition: background-color 0.5s;
+            -moz-transition: background-color 0.5s;
+            -ms-transition: background-color 0.5s;
+            -o-transition: background-color 0.5s;
+        }
+        &--display{
+            margin-top: initial;
+            max-height: initial;
+            padding: initial; 
+        }
+        
+    }
+    .lattesSubNav{
+        background-color: darken($w, 5);
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        overflow-y: hidden;           
+        max-height: 0;                     
+        position: absolute;      
+        right: 0;  top: 0;
+        width: 36rem;  
+        z-index: -1;
+        &_menu{   
+            margin: 0.3rem;    
+            min-width: 15rem;                  
+            width: calc((100% / 3) - 4rem);
+            & a{
+                color: $b;
+                &:hover{
+                    transform: scale(0.95);
+                    -webkit-transform: scale(0.95);
+                    -moz-transform: scale(0.95);
+                    -ms-transform: scale(0.95);
+                    -o-transform: scale(0.95);
+                }
+                transition: transform 0.3s;
+                -webkit-transition: transform 0.3s;
+                -moz-transition: transform 0.3s;
+                -ms-transition: transform 0.3s;
+                -o-transition: transform 0.3s;
+            }
+        }
+        &--display{
+            margin-top: 1rem;
+            max-height: 80vh;
+            padding: 3.2rem 2rem 2rem 2rem; 
+            border-bottom: 0.2rem solid $main;
+        }
+        border-radius: 0 0 0 0.5rem;
+        -webkit-border-radius: 0 0 0 0.51rem;
+        -moz-border-radius: 0 0 0 0.51rem;
+        -ms-border-radius: 0 0 0 0.51rem;
+        -o-border-radius: 0 0 0 0.51rem;
+        transition: max-height 0.5s, padding 0.5s;
+        -moz-transition: max-height 0.5s, padding 0.5s;
+        -ms-transition: max-height 0.5s, padding 0.5s;
+        -o-transition: max-height 0.5s, padding 0.5s;
+        -webkit-transition: max-height 0.5s, padding 0.5s;
+    }
+}
+    
+@media screen and (min-width: $desktopSizeL){        
+    .lattesNavArea{
+        &_menu{
+            &_icone{
+                display: initial;
+            }
+        }
+    }
+}

@@ -1,0 +1,62 @@
+.lattesSlider{
+    margin-top: 2rem;
+    width: 100%;
+    position: relative;
+    background-color: $b;
+    border-bottom: 0.2rem solid $main;    
+    &_title{
+        color: $w;
+        font-family: 'feltTip','raleway',arial, Helvetica, sans-serif;
+        font-size:  2.5rem;
+        position: absolute;
+        bottom: 1rem; left: 2rem;
+        text-shadow: 0 0 0.5rem $b;
+        z-index: 1;
+    }
+}
+.lattesSlideArea{
+    width: 100%;
+    position: relative;
+    z-index: 1;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    // transition à la fin
+    &::after{
+        content:'';
+        position: absolute;
+        top:0; right:0; bottom:0; left:0;
+        z-index: -1;
+        background-color: $b;
+        opacity: 0.1;
+    }
+    &_slide{
+       display: none; 
+    }
+    &--switch{
+        opacity: 0;
+    }
+    &--home{
+        height: 40vh;
+        max-height: 20rem;
+    }
+    transition: opacity 0.7s;
+    -webkit-transition: opacity 0.7s;
+    -moz-transition: opacity 0.7s;
+    -ms-transition: opacity 0.7s;
+    -o-transition: opacity 0.7s;
+}
+@media screen and (min-width: $desktopSize){
+    .lattesSlider{    
+        &_title{
+            font-size:  3rem;
+        }      
+    }
+    .lattesSlideArea{
+        &--home{
+            height: 50vh;
+            max-height: 30rem;
+        }
+    }
+}

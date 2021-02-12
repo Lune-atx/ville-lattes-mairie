@@ -1,0 +1,181 @@
+.lattes{
+    &_agendaSection{    
+        margin: 3rem auto 0 auto;
+        padding: 2rem 0;
+        position: relative;
+        z-index: 1;
+        &::after{
+            background-image: url("../medias/backgrounds/trameColor.png");
+            background-repeat: repeat;
+            background-size: 5%;
+            content:'';
+            opacity: 0.2;
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+        }
+        &_title{       
+            color: $main;
+            font-size: 3rem;
+            font-weight: 600;
+            margin: initial;     
+            text-align: center;
+        }
+        &_eventArea{
+            max-width: 70rem;
+            margin: 0 auto;       
+        }
+        &_more{
+            color: $main;  
+            display: block;         
+            font-size: 1.3rem;
+            font-weight: 600;
+            margin: auto;
+            text-align: center;
+        }
+    }
+    &_event{
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        box-shadow: 0.5rem 0.5rem 2rem lighten($b, 70);
+        display: flex;
+        align-items: stretch;
+        flex-direction: column;
+        height: 15rem;
+        justify-content: flex-end;
+        margin: 2rem auto;
+        max-width: 30rem;
+        width: 100%;
+        position: relative;
+        z-index: 1;
+        &::after{
+           background-color: $b;
+            content:  '';
+            opacity: 0.4;
+            position: absolute;
+            top: 0; right:0; bottom:0; left: 0;
+            z-index: -1;
+        }           
+        &:nth-of-type(3),
+        &:nth-of-type(4),
+        &:nth-of-type(5),
+        &:nth-of-type(6),
+        &:nth-of-type(7),
+        &:nth-of-type(8){
+            display: none;
+        }
+        &_content{    
+            padding: 1rem;
+            width: 100%;
+            &_title{
+                color: $w;
+                font-size: 1.2rem;
+                font-weight: 400;    
+                max-width: 20rem;
+                text-shadow: 0 0 1rem $b;               
+            }
+            &_date{
+                background-color: $main;
+                color: $w;
+                display: inline-block;
+                font-size: 0.95rem;
+                font-weight: 600;
+                margin: 1rem auto 0 auto;
+                padding: 0.2rem 0.5rem;
+                border-radius: 0.2rem;
+                -webkit-border-radius: 0.2rem;
+                -moz-border-radius: 0.2rem;
+                -ms-border-radius: 0.2rem;
+                -o-border-radius: 0.2rem;
+            }
+        }
+        border-radius: 0.2rem;
+        -webkit-border-radius: 0.2rem;
+        -moz-border-radius: 0.2rem;
+        -ms-border-radius: 0.2rem;
+        -o-border-radius: 0.2rem;
+    }
+}
+
+@media screen and (min-width: $tabSize){
+    .lattes{
+        &_agendaSection{
+            &_title{
+                font-weight: 600;
+            }
+            &_eventArea{            
+                display: grid;
+                grid-gap: 1rem;
+                grid-template-columns: repeat(2, 1fr);
+                padding: 3rem 2rem; 
+                &::after{
+                    background-size: 3%;
+                }
+            }
+        }
+        &_event{
+            justify-self: center;
+            margin: initial;
+            &:hover{
+                &::after{
+                    background-color: $bInv;
+                }
+                transform: scale(0.99);
+                -webkit-transform: scale(0.99);
+                -moz-transform: scale(0.99);
+                -ms-transform: scale(0.99);
+                -o-transform: scale(0.99);
+            }
+            &::after{
+                transition: background-color 0.4s ;
+                -webkit-transition: background-color 0.4s ;
+                -moz-transition: background-color 0.4s ;
+                -ms-transition: background-color 0.4s ;
+                -o-transition: background-color 0.4s ;
+                }
+            transition: transform 0.2s;
+            -webkit-transition: transform 0.2s;
+            -moz-transition: transform 0.2s;
+            -ms-transition: transform 0.2s;
+            -o-transition: transform 0.2s;
+        }
+    }
+}
+@media screen and (min-width: $desktopSize){
+    .lattes{
+        &_agendaSection{
+            &::after{
+                background-size: 2.5%;
+            }
+            &_eventArea{
+                grid-template-columns: repeat(3, 1fr);
+            } 
+        }
+        &_event{
+            &:nth-of-type(3){
+                display: flex;
+            }       
+        }
+    }    
+}
+
+@media screen and (min-width: $desktopSizeL){
+    .lattes{
+        &_agendaSection{
+            &_eventArea{
+                flex-wrap: wrap;
+                justify-content: stretch;
+            }
+        }
+        &_event{
+            height: 12rem;
+            max-width: initial;
+            &:nth-of-type(4),
+            &:nth-of-type(5),
+            &:nth-of-type(6){
+                display: flex;
+            }
+        }
+    }
+}
